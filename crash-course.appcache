@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# 2018-03-27 V1.0.0
+/assets/a45amg.jpg
+/Features.html
+/index.html
+NETWORK:
+*
+FALLBACK:
+/html /offline.html

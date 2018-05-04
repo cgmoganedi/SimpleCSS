@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <style type="text/css">
+        /* comment */
+        body{
+            height: 1000px;
+            background-image: url("assets/a45amg.jpg");
+        }
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table{
+            width: 100%;
+        }
+        th{
+            height: 40px;
+            vertical-align: bottom;
+            background-color: darkgreen;
+            color: white;
+        }
+        td{
+            padding: 5px;
+        }
+        div{
+            text-align: center;
+            line-height: 50px;
+            width: 200px;
+            padding: 10px;
+            border: 3px none black;
+            border-style: solid dotted double;
+            border-right-style: dotted;
+            margin: 20px;
+        }
+        .tmp{
+            width: 50%;
+            min-width: 300px;
+            max-width: 600px;
+            background-color: lightblue;
+            height: 100px;
+            margin: 0 auto;
+        }
+        tr.alt{
+            background-color: lightgray;
+        }
+        .fixed-box{
+            width: 100px;
+            height: 100px;
+            border: 3px double black;
+            position: fixed;
+            right: 10px;
+            top: 10px;
+        }
+        .a{
+            list-style-type: circle;
+        }
+        .b{
+            list-style-type: square;
+        }
+        .c{
+            list-style-type: lower-roman;
+        }
+        .d{
+            list-style-type: lower-alpha;
+        }
+        div.left, div.right{
+            width:100px;
+            height:100px;
+            background-color: orange;
+            position: absolute;
+        }
+        .left{
+            left: 5px;
+        }
+        .right{
+            right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>Some content here.</div>
+    <ul class="a">
+        <li>Apples</li>
+        <li>Oranges</li>
+        <li>Banans</li>
+    </ul>
+    <ul class="b">
+        <li>Car</li>
+        <li>Bike</li>
+        <li>Bus</li>
+    </ul>
+    <ul class="c">
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Green</li>
+    </ul>
+    <ul class="d">
+        <li>Up</li>
+        <li>Down</li>
+        <li>Left</li>
+        <li>Right</li>
+    </ul>
+    <br>
+    <div class="tmp">
+        More content here.
+    </div>
+    <div class="fixed-box">
+        Nothing.
+    </div>
+    <br>
+    <table>
+        <tr>
+            <th>First</th>
+            <th>Last</th>
+            <th>Color</th>
+        </tr>
+        <tr class="alt">
+            <td>Pere</td>
+            <td>Donki</td>
+            <td>Brown</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>Pink</td>
+        </tr>
+        <tr class="alt">
+            <td>Joe</td>
+            <td>Marini</td>
+            <td>Red</td>
+        </tr>
+    </table>
+    <div class="left"></div>
+    <div class="right"></div>
+</body>
+</html>

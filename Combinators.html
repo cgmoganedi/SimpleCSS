@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinators</title>
+    <style type="text/css">
+        /*change all of the paragraphs inside of the
+        outer div to a red text color */
+        div.outer > p{
+            color: lightgray;
+        }
+        p.target ~ p{
+            color: slategray;
+        }
+        img{
+            width: 100px;
+            border: 3px solid slategray;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        img:hover{
+            border-color: black;
+        }
+        div img:nth-child(odd){
+            background-color: lightgray;
+        }
+        div img:first-child{
+            background-color: slategray;
+        }/*
+        p::first-line{
+            color: black;
+        }*/
+        p::first-letter{
+            color: red;
+            font-size: 3em;
+        }
+        ::selection{
+            background-color: yellow;
+        }
+        p::after{
+            content: " The story ended";
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>Vrrr Phah, Phahhh!</h1>
+<p>Nigga look like we'll, nigga look like we'll shoot at 'em
+    Niggas look like we'll sponsor the dope and you sell 'em
+    Nigga look like you'd snitch on a nigga, yeah, you tell 'em
+    Nigga might think we UPS the way we mail 'em
+    Nigga might think you FED's the way you snap pictures</p>
+<div class="inner">
+    <div>
+        <img src="assets/a45amg.jpg">
+        <img src="assets/a45amg.jpg">
+        <img src="assets/a45amg.jpg">
+        <img src="assets/a45amg.jpg">
+        <img src="assets/a45amg.jpg">
+        <img src="assets/a45amg.jpg">
+        <img src="assets/a45amg.jpg">
+        <img src="assets/a45amg.jpg">
+    </div>
+    <div class="outer">
+        <p>Nigga look like we'll, nigga look like we'll shoot at 'em
+            Niggas look like we'll sponsor the dope and you sell 'em
+            Nigga look like you'd snitch on a nigga, yeah, you tell 'em
+            Nigga might think we UPS the way we mail 'em
+            Nigga might think you FED's the way you snap pictures</p>
+        <p class="target">Nigga look like we'll, nigga look like we'll shoot at 'em
+            Niggas look like we'll sponsor the dope and you sell 'em
+            Nigga look like you'd snitch on a nigga, yeah, you tell 'em
+            Nigga might think we UPS the way we mail 'em
+            Nigga might think you FED's the way you snap pictures</p>
+        <p>Nigga look like we'll, nigga look like we'll shoot at 'em
+            Niggas look like we'll sponsor the dope and you sell 'em
+            Nigga look like you'd snitch on a nigga, yeah, you tell 'em
+            Nigga might think we UPS the way we mail 'em
+            Nigga might think you FED's the way you snap pictures</p>
+        <div class="inner">
+            <p>Nigga look like we'll, nigga look like we'll shoot at 'em
+                Niggas look like we'll sponsor the dope and you sell 'em
+                Nigga look like you'd snitch on a nigga, yeah, you tell 'em
+                Nigga might think we UPS the way we mail 'em
+                Nigga might think you FED's the way you snap pictures</p>
+        </div>
+        <p>Nigga look like we'll, nigga look like we'll shoot at 'em
+            Niggas look like we'll sponsor the dope and you sell 'em
+            Nigga look like you'd snitch on a nigga, yeah, you tell 'em
+            Nigga might think we UPS the way we mail 'em
+            Nigga might think you FED's the way you snap pictures</p>
+    </div>
+</body>
+</html>

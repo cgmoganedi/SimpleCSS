@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" manifest="crash-course.appcache">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Features</title>
+
+    <style type="text/css">
+        .drop-target{
+            float: left;
+            width: 200px;
+            height: 133px;
+            border: 3px solid orange;
+            margin: 25px;
+            padding: 25px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <output id="output1"></output>
+    <p>Click to get your coordinates</p>
+    <button onclick="getLocation();">Get Location</button>
+    <p id="output"></p>
+
+    <!-- drop target #1-->
+    <div class="drop-target" id="target1" ondragover="allowDrop(event);" ondrop="drop(event);">
+        <img src="assets/a45amg.jpg" id="draggable1" width="200px" draggable="true" ondragstart="drag(event);">
+    </div>
+
+    <!-- drop taget #2 -->
+    <div class="drop-target" id="target2" ondragover="allowDrop(event);" ondrop="drop(event);"></div>
+    <!-- drop taget #3 -->
+    <div class="drop-target" id="target3" ondragover="allowDrop(event);" ondrop="drop(event);"></div>
+
+</body>
+<script type="text/javascript">
+    // drag and drop
+    function drag(e){
+        e.dataTransfer.setData("text", e.target.id);
+    }
+    function allowDrop(e){
+        e.preventDefault();
+    }
+    function drop(e){
+        e.preventDefault();
+        //alert(e.target.id);
+        var data = e.dataTransfer.getData("text");
+        e.target.appendChild(document.getElementById(data));
+        //alert(data);
+    }
+
+    // local storage
+    if(typeof(Storage) !== "undefined"){
+        // THIS DOES NOT EXPIRE
+        // set data
+        localStorage.setItem("city","Johannesburg");
+        // get data
+        document.getElementById("output1").innerHTML = localStorage.getItem("city");
+
+        //YOU CAN ALSO REMOVE AN ITEM IF YOU WANT TO. (localStorage.removeItem("city");)
+    }
+    else{
+        // not supported
+        document.getElementById("output1").innerHTML = "Storage not supported";
+    }
+
+    // geoloation
+    var output = document.getElementById("output");
+    function getLocation(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(outputPosition);
+        }
+        else{
+            output.innHTML = "Geolocation not supported";
+        }
+    }
+    function outputPosition(position){
+        output.innerHTML = "Your position is <br>Lat: " + position.coords.latitude+"<br>Long: " + position.coords.longitude;
+    }
+</script>
+</html>
